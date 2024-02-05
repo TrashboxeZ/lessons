@@ -1,0 +1,15 @@
+---
+# defaults file for install_nginx
+
+nginx_worker_connections: "1024"
+nginx_user: 'www-data'
+nginx_group: 'www-data'
+nginx_sendfile: 'off'
+nginx_tcp_nodelay: 'on'
+nginx_tcp_nopush: 'off'
+nginx_vhost_path: /etc/nginx/sites-enabled
+
+nginx_log_format: |-
+  '$remote_addr - $remote_user [$time_local] "$request" '
+  '$status $body_bytes_sent "$http_referer" '
+  '"$http_user_agent" "$http_x_forwarded_for"'

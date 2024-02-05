@@ -1,0 +1,6 @@
+# tasks file for install_nginx
+- name: Ensure if Nginx presents
+  apt:
+    name: nginx
+    state: present
+  notify: start nginx  
